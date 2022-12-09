@@ -6,14 +6,8 @@ const cidades = [
     "Rio de Janeiro",
 ]
 
-let maiorString = cidades.reduce((acumulador, proximo) => {
-
-    if (acumulador.length > proximo.length) {
-        return acumulador
-    } else {
-        return proximo
-    }
-
+const maiorString = cidades.reduce(function (acumulador, atual) {
+    return atual.length > acumulador.length ? atual : acumulador;
 });
 
 console.log(maiorString);
